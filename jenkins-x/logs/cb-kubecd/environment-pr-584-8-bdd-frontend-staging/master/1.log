@@ -1,0 +1,45 @@
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-8-j68cd-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1595258724.4180543,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-8-j68cd-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-8-j68cd-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-8-j68cd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-environment-pr-584-8-j68cd-x8299[0m
+{"level":"info","ts":1595258733.030547,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/cb-kubecd/environment-pr-584-8-bdd-frontend-staging.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1595258733.0309591,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1595258733.073255,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-8-j68cd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-8-j68cd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d70db5a980a7c0b569fae9715c50d13f7e3ed4fb
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-8-j68cd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /tekton/home/git/credentials
+
+Showing logs for build [32mcb-kubecd-environment-pr-584-8-j68cd-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 1
+Namespace **-staging created 
+creating the lock configmap **-lock-**-staging
+lock configmap **-lock-**-staging created
+Ignoring templates/.gitignore
+Ignoring templates/wildcardcert-secret.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+cleaning the lock configmap **-lock-**-staging
